@@ -2,15 +2,17 @@
 
 import { useEffect, useState } from "react";
 
+type Theme = "dark" | "light" | "red";
+
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
     const current = document.documentElement.getAttribute("data-theme");
-    setTheme(current === "light" ? "light" : "dark");
+    setTheme(current === "light" || current === "red" ? current : "dark");
   }, []);
 
-  function setMode(next: "dark" | "light") {
+  function setMode(next: Theme) {
     setTheme(next);
     document.documentElement.setAttribute("data-theme", next);
     try {
@@ -45,6 +47,18 @@ export default function ThemeToggle() {
         }
       >
         Light
+      </button>
+      /
+      <button
+        type="button"
+        onClick={() => setMode("red")}
+        className={
+          theme === "red"
+            ? "text-accent underline decoration-dashed underline-offset-4"
+            : "text-muted transition-colors hover:text-foreground"
+        }
+      >
+        Red
       </button>
     </span>
   );

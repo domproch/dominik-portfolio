@@ -14,6 +14,13 @@
   --muted: #7d7566;
 }
 
+:root[data-theme="red"] {
+  --background: #e02020;
+  --foreground: #fff5f0;
+  --accent: #1a1110;
+  --muted: #f5b3ab;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
