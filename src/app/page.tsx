@@ -32,6 +32,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/*
           <p className="mt-4 text-lg font-medium tracking-tight sm:text-xl">
             Product, Hardware, Interaction{" "}
             <span className="text-muted">&mdash;</span> Magical Tech.
@@ -50,6 +51,7 @@ export default function Home() {
               London
             </dd>
           </dl>
+          */}
         </header>
       </div>
 
