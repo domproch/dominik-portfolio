@@ -15,10 +15,10 @@
 }
 
 :root[data-theme="red"] {
-  --background: #e02020;
-  --foreground: #fff5f0;
-  --accent: #1a1110;
-  --muted: #f5b3ab;
+  --background: #b31c1c;
+  --foreground: #050505;
+  --accent: #ffffff;
+  --muted: #6b2020;
 }
 
 @theme inline {
