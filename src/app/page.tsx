@@ -7,19 +7,17 @@ export default function Home() {
     <>
       <div className="mx-auto max-w-2xl px-6 pt-16 sm:pt-24">
         <header className="border-b-2 border-foreground pb-6">
-          <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-foreground pb-4">
-            <div>
-              <p className="text-xl font-semibold tracking-tight sm:text-2xl">
-                Dominik Procházka{" "}
-                <span className="align-super text-xs font-normal text-muted">
-                  [1]
-                </span>
-              </p>
-              <p className="mt-0.5 font-mono text-xs text-muted">
-                Designer & Creative Technologist
-              </p>
-            </div>
-            <div className="text-right font-mono text-xs leading-relaxed text-muted">
+          <div className="flex flex-col items-center gap-1 border-b border-foreground pb-4 text-center">
+            <p className="text-xl font-semibold tracking-tight sm:text-2xl">
+              Dominik Procházka{" "}
+              <span className="align-super text-xs font-normal text-muted">
+                [1]
+              </span>
+            </p>
+            <p className="font-mono text-xs text-muted">
+              Designer & Creative Technologist
+            </p>
+            <div className="mt-2 font-mono text-xs leading-relaxed text-muted">
               <p>
                 <span className="text-muted">[2]</span>{" "}
                 Portfolio No.: DP&ndash;2026
