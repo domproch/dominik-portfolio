@@ -16,95 +16,81 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "aperture",
-    title: "Aperture",
-    year: "2025",
-    tags: ["Hardware", "Interaction"],
+    slug: "tessera",
+    title: "Tessera",
+    year: "2024",
+    tags: ["Hardware", "Sustainability"],
     tagline:
-      "An ambient light with a mechanical iris that breathes with the room.",
-    gradient: "from-[#f4c17d] via-[#e2734f] to-[#6f3a3a]",
-    image: "/work/aperture.svg",
-    role: "Product & interaction design, mechanical design",
-    timeline: "4 months — concept to working prototype",
-    tools: "SolidWorks, Arduino, brushed aluminum, laser-cut acrylic",
+      "A modular speaker kit tackling e-waste and extending the product lifespan.",
+    gradient: "from-[#e2726a] via-[#a33a30] to-[#3a0f0d]",
+    image: "/work/tessera.svg",
+    role: "Product & mechanical design, electronics R&D",
+    timeline: "University project — 10 weeks, 2024, individual",
+    tools:
+      "Foam & card modelling, laser-cut panels, machined & knurled aluminum, custom PCB/crossover",
     overview:
-      "Aperture began with a simple question: what would a light look like if it had a pupil instead of a switch? Rather than a dimmer dial or an app, the fixture reads the room through a light sensor and slowly irises open or closed, the way an eye adjusts to a change in daylight.",
+      "Roughly 62 billion kilograms of e-waste are generated every year, and home speakers are one of the quieter contributors — undercut not by failure but by new connectivity standards, ageing components, and shifting style trends. Tessera is a home speaker kit designed around the opposite assumption: that it should be taken apart, not thrown out. Every module — tweeter, woofer, and controls — is built to be opened, repaired, and upgraded by the person who owns it.",
     process:
-      "Early sketch models used paper iris mechanisms borrowed from camera lenses, scaled up and rebuilt in aluminum leaflets. Dozens of linkage geometries were tested by hand before landing on a nine-blade iris that opens smoothly without the linkages ever crossing. A small stepper motor and a light-dependent resistor let the piece feel autonomous rather than remote-controlled.",
+      "The project moved from sketch ideation into low-fidelity foam and card models to work out scale, part layout, and human factors, then into electronics R&D — researching wire connectors and prototyping the crossover and PCB circuitry. Mid- and high-fidelity modelmaking followed: laser-cut panels, hand-threaded screw holes, and machined, knurled aluminum detailing, aimed at a rugged, honest-mechanics, \u2018scientific equipment\u2019 aesthetic.",
     outcome:
-      "The working prototype holds up to daily use on a desk and has quietly become the object people reach for first when a room feels wrong. The next revision focuses on quieting the motor and finishing the blades in a warmer, hand-brushed metal.",
+      "The project resolved into a fully assembled black model with swappable tweeter, woofer, and controls modules — each accessible without special tools, so the speaker can be repaired or upgraded piece by piece instead of replaced whole.",
   },
   {
-    slug: "cadence",
-    title: "Cadence",
+    slug: "numa",
+    title: "Numa",
+    year: "2025",
+    tags: ["IoT", "Interaction"],
+    tagline:
+      "A near-future IoT device giving context-based reminders at the right moment.",
+    gradient: "from-[#5a5a56] via-[#2a2a28] to-[#0a0a0a]",
+    image: "/work/numa.svg",
+    role: "Interaction design, embedded prototyping",
+    timeline: "Mini personal project — 1 week, 2025, individual",
+    tools: "ESP32, e-ink display, Wi-Fi, Powerfoyle solar cell, PIR sensor",
+    overview:
+      "Numa is grounded in Amber Case\u2019s principles of calm technology: minimal attention, informing without noise, working even when it fails, and respecting social norms. The brief started as a before/after comic — forgetting your keys on the way out — and resolved into a small display by the door that quietly covers the weather, essential-item reminders, transit tracking, and delivery tracking, staying silent until it\u2019s actually useful.",
+    process:
+      "The concept called for a device that could power and inform itself: a Powerfoyle solar cell layer, a PIR sensor to wake the display, a mic and speaker for the rare moment it needs to speak up, an e-ink display for the rest, and USB-C as backup power. As proof of concept, an ESP32 pulls live weather data over Wi-Fi and renders it directly on the e-ink screen.",
+    outcome:
+      "The interface settled into a set of rotating, card-style reminders — bus times, delivery windows, key tracking — shown on a warm beige e-ink display that only asks for attention when there\u2019s something worth saying.",
+  },
+  {
+    slug: "terratap",
+    title: "TerraTap",
     year: "2024",
-    tags: ["Wearable", "Hardware"],
-    tagline: "A haptic metronome that keeps time on your wrist, not your ears.",
-    gradient: "from-[#f6d9a0] via-[#d98c4b] to-[#4a2f2b]",
-    image: "/work/cadence.svg",
-    role: "Product design, embedded systems, industrial design",
-    timeline: "6 months — research through prototype",
-    tools: "Fusion 360, nRF52, ERM motors, 3D-printed nylon, silicone",
-    outcome:
-      "Musicians who tested Cadence during rehearsal reported it disappeared into muscle memory within a session or two — the goal from the outset. A future version explores a slimmer enclosure and multi-limb pairing for drummers.",
+    tags: ["Product", "Sustainability"],
+    tagline: "A solar-powered, mushroom-shaped smart plant sensor.",
+    gradient: "from-[#eef0df] via-[#8fae6a] to-[#33402a]",
+    image: "/work/terratap.svg",
+    role: "Product design; group research, individual product concept",
+    timeline:
+      "University project — 10 weeks, 2024, group research + individual concept",
+    tools:
+      "r-PLA 3D printing, Powerfoyle solar layer, nRF52832 BLE, NFC, multicolor LED",
     overview:
-      "Musicians practicing with a metronome are stuck choosing between a click that competes with the music or a flashing light that pulls focus to a screen. Cadence moves the beat to the skin: a soft pulse against the wrist marks tempo, leaving ears and eyes free for the music.",
+      "The brief called for a single, independently-powered domestic product built around energy harvesting and sustainable plastics. Market research pointed toward plant care — a plant sensor market heading toward $475M and an IoT market toward $4B by the early 2030s — with room for tech-savvy gardeners, plant enthusiasts, and sustainability-conscious buyers who weren\u2019t well served by existing sensors like Krado, Xiaomi\u2019s Mi Flora, or Whisperer Gen2.",
     process:
-      "Prototyping started with off-the-shelf vibration motors taped to a wristband to validate that a pulse could be felt clearly at tempos from 40 to 200 BPM without numbing out. From there the enclosure was designed around a coin-cell battery and a single button, with the electronics potted in silicone so the whole band could be worn through a two-hour rehearsal.",
+      "Competitor benchmarking (Krado, Monk Makes, One Plant Monitor, Xiaomi Mi Flora, Willow, Whisperer Gen2, roughly $9\u2013$100) surfaced a gap: no single product combined self-charging, on-device indicators, NFC/BLE/Wi-Fi connectivity, indoor/outdoor use, and water resistance in one considered object. Form studies started in sculpted clay, exploring a mushroom-cap silhouette, before resolving into a semi-transparent r-PLA cap over a Powerfoyle solar layer, a multicolor LED, and an nRF52832 BLE chip with NFC.",
+    outcome:
+      "TerraTap monitors light, temperature, moisture, and humidity, and reports back through color-coded light feedback — a soft cue for \u2018I need water\u2019 or \u2018I need light\u2019 — with NFC-enabled pairing to a companion app for anyone who wants the detail behind the glow.",
   },
   {
-    slug: "glassware",
-    title: "Glassware",
-    year: "2024",
-    tags: ["Interaction", "Software"],
-    tagline: "A gesture-based interface for controlling audio without a screen.",
-    gradient: "from-[#cfe0e8] via-[#7fa7b8] to-[#2f4653]",
-    image: "/work/glassware.svg",
-    role: "Interaction design, computer vision prototyping",
-    timeline: "3 months — sprint project",
-    tools: "TouchDesigner, MediaPipe, Python, an old webcam",
+    slug: "speralux",
+    title: "Speralux",
+    year: "2025",
+    tags: ["Product", "Lighting"],
+    tagline: "A Spitfire-inspired table lamp designed for the RAF Museum.",
+    gradient: "from-[#4a4a48] via-[#222220] to-[#050505]",
+    image: "/work/speralux.svg",
+    role: "Product & mechanical design, metalwork",
+    timeline: "University project — 8 weeks, 2025, individual",
+    tools: "Aluminum lathe turning & machining, hand-formed metalwork, brass detailing",
     overview:
-      "Glassware explores what it feels like to conduct a room of sound with your hands instead of a phone screen. A single camera watches for a small vocabulary of gestures — a raised palm to pause, a turning wrist to adjust volume, a pinch to skip — and maps them to whatever is playing.",
+      "Designed for the RAF Museum, Speralux borrows its geometry directly from the Spitfire: a curved, wing-like arm and a propeller-inspired shade, reduced to the proportions of a table lamp rather than an aircraft.",
     process:
-      "The bulk of the work was in restraint: cutting the gesture set down from an initial fourteen to a final four so that nothing needed to be memorized. Every gesture had to feel like something you'd already do to say 'quieter' or 'skip this,' tested informally on people who had never seen the system before.",
+      "The arm and shade pivot mechanism went through sketch exploration and a cardboard-and-paper form study before moving into metal — an aluminum base turned and machined on a lathe, a hand-formed bent metal arm, and a brass base detailed around the wiring.",
     outcome:
-      "The prototype runs reliably in a living room with normal lighting and has become the default way music gets controlled during dinner. It's a proof of concept for a broader idea: technology that responds to how we already move, rather than teaching us a new set of motions.",
-  },
-  {
-    slug: "loam",
-    title: "Loam",
-    year: "2023",
-    tags: ["Product", "Hardware"],
-    tagline: "A soil sensor planter that texts you before your plant wilts.",
-    gradient: "from-[#d9d2b8] via-[#8a9a6b] to-[#33402a]",
-    image: "/work/loam.svg",
-    role: "Product design, PCB layout, firmware",
-    timeline: "5 months — concept to small batch",
-    tools: "KiCad, ESP32, capacitive soil probes, thrown ceramic, Twilio",
-    overview:
-      "Loam is a planter with a capacitive moisture probe built into the base and a small ceramic body thrown to hide it completely — no visible electronics, no app to open. When the soil gets too dry, it sends a plain text message, and nothing more.",
-    process:
-      "The hardest constraint was self-imposed: the electronics had to disappear. That meant designing a probe geometry that could be cast into unglazed ceramic without shorting, and a battery and antenna layout that fit inside a base thin enough to still look like pottery rather than a gadget.",
-    outcome:
-      "Six planters have been running unattended for over a year, watering reminders and all. The project became a small case study in the studio's thinking on quiet technology — devices that are only ever heard from when they truly need to be.",
-  },
-  {
-    slug: "nightstand-os",
-    title: "Nightstand OS",
-    year: "2023",
-    tags: ["Interaction", "Product"],
-    tagline: "A screen-free bedside device for the last and first five minutes of the day.",
-    gradient: "from-[#e7d6c9] via-[#b98866] to-[#3a2a22]",
-    image: "/work/nightstand-os.svg",
-    role: "Interaction design, industrial design, sound design",
-    timeline: "4 months — concept to prototype",
-    tools: "Rhino, Arduino, capacitive touch, a small speaker, felt",
-    overview:
-      "Nightstand OS is an attempt to remove the phone from the first and last five minutes of the day. A single felt-topped dial controls an alarm, a soft wake-up light, and a short ambient soundscape — no screen, no notifications, no scrolling.",
-    process:
-      "Every interaction was reduced to a twist, a press, or a tap, tested at 6am in an actual bedroom rather than on a desk. The light curve, the volume ramp, and even the resistance of the dial itself went through a dozen iterations to feel calm rather than urgent.",
-    outcome:
-      "People who tried it for a week described reaching for their phone noticeably less first thing in the morning. The next step is exploring a version that syncs gently with sunrise rather than a fixed alarm time.",
+      "The final lamp pairs a brushed-aluminum body with a warm-glow bulb set at the junction of wing and arm, keeping the Spitfire reference legible without literally reproducing the aircraft.",
   },
 ];
 

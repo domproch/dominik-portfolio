@@ -2,7 +2,7 @@ import ProjectExplorer from "@/components/ProjectExplorer";
 import ThemeToggle from "@/components/ThemeToggle";
 import { projects } from "@/lib/projects";
 
-const socials = [{ label: "Email", href: "mailto:dominikprochazka@outlook.com" }];
+const socials = [{ label: "→ Email", href: "mailto:dominikprochazka@outlook.com" }];
 
 export default function Home() {
   return (
