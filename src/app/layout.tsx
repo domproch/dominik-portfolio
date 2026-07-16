@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import Script from "next/script";
+import BootLoader from "@/components/BootLoader";
 import "./globals.css";
 
 const plexSans = IBM_Plex_Sans({
@@ -48,6 +49,7 @@ export default function RootLayout({
           })();`}
         </Script>
         <div className="noise-overlay" aria-hidden="true" />
+        <BootLoader />
         <main className="flex-1">{children}</main>
       </body>
     </html>

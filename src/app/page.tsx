@@ -2,11 +2,7 @@ import ProjectExplorer from "@/components/ProjectExplorer";
 import ThemeToggle from "@/components/ThemeToggle";
 import { projects } from "@/lib/projects";
 
-const socials = [
-  { label: "Email", href: "mailto:hello@dominikprochazka.com" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/" },
-  { label: "Instagram", href: "https://www.instagram.com/" },
-];
+const socials = [{ label: "Email", href: "mailto:dominikprochazka@outlook.com" }];
 
 export default function Home() {
   return (
@@ -25,7 +21,7 @@ export default function Home() {
                 Designer & Creative Technologist
               </p>
             </div>
-            <div className="text-right font-mono text-xs leading-relaxed text-muted">
+            <div className="text-left font-mono text-xs leading-relaxed text-muted sm:text-right">
               <p>
                 <span className="text-muted">[2]</span>{" "}
                 Portfolio No.: DP&ndash;2026
@@ -39,6 +35,10 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          <p className="max-w-md text-sm leading-relaxed text-muted">
+            Thinking and making in product, hardware and interaction.
+          </p>
 
           <div className="my-4 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-dashed border-foreground/30 pt-4 font-mono text-xs text-muted">
             {socials.map((social) => (

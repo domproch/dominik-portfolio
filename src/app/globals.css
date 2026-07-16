@@ -92,3 +92,15 @@ body {
     animation: none;
   }
 }
+
+@keyframes boot-dot {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
