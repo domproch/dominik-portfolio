@@ -18,7 +18,7 @@
   --background: #b31c1c;
   --foreground: #050505;
   --accent: #ffffff;
-  --muted: #6b2020;
+  --muted: #000000;
 }
 
 @theme inline {

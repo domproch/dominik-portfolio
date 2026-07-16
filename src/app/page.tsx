@@ -2,6 +2,12 @@ import ProjectExplorer from "@/components/ProjectExplorer";
 import ThemeToggle from "@/components/ThemeToggle";
 import { projects } from "@/lib/projects";
 
+const socials = [
+  { label: "Email", href: "mailto:hello@dominikprochazka.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/" },
+  { label: "Instagram", href: "https://www.instagram.com/" },
+];
+
 export default function Home() {
   return (
     <>
@@ -34,7 +40,23 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="my-4 border-t border-dashed border-foreground/30" />
+          <div className="my-4 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-dashed border-foreground/30 pt-4 font-mono text-xs text-muted">
+            {socials.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target={social.href.startsWith("http") ? "_blank" : undefined}
+                rel={
+                  social.href.startsWith("http")
+                    ? "noopener noreferrer"
+                    : undefined
+                }
+                className="underline decoration-dashed underline-offset-4 transition-colors hover:text-foreground"
+              >
+                {social.label}
+              </a>
+            ))}
+          </div>
 
           {/*
           <p className="mt-4 text-lg font-medium tracking-tight sm:text-xl">
