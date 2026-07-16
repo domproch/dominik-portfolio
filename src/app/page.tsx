@@ -20,6 +20,25 @@ export default function Home() {
               <p className="mt-0.5 font-mono text-xs text-muted">
                 Designer & Creative Technologist
               </p>
+              <p className="mt-2 font-mono text-xs text-muted">
+                {socials.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target={
+                      social.href.startsWith("http") ? "_blank" : undefined
+                    }
+                    rel={
+                      social.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                    className="underline decoration-dashed underline-offset-4 transition-colors hover:text-foreground"
+                  >
+                    {social.label}
+                  </a>
+                ))}
+              </p>
             </div>
             <div className="text-left font-mono text-xs leading-relaxed text-muted sm:text-right">
               <p>
@@ -36,27 +55,11 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="max-w-md text-sm leading-relaxed text-muted">
+          <div className="border-t border-foreground/30" />
+          <p className="max-w-md py-4 text-sm leading-relaxed text-muted">
             Thinking and making in product, hardware and interaction.
           </p>
-
-          <div className="my-4 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-dashed border-foreground/30 pt-4 font-mono text-xs text-muted">
-            {socials.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target={social.href.startsWith("http") ? "_blank" : undefined}
-                rel={
-                  social.href.startsWith("http")
-                    ? "noopener noreferrer"
-                    : undefined
-                }
-                className="underline decoration-dashed underline-offset-4 transition-colors hover:text-foreground"
-              >
-                {social.label}
-              </a>
-            ))}
-          </div>
+          <div className="border-t border-foreground/30" />
 
           {/*
           <p className="mt-4 text-lg font-medium tracking-tight sm:text-xl">
