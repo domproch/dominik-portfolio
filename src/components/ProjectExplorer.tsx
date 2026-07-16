@@ -9,7 +9,7 @@ export default function ProjectExplorer({ projects }: { projects: Project[] }) {
   const [view, setView] = useState<"index" | "grid">("index");
 
   return (
-    <div className="mt-16">
+    <div className="mt-10">
       <div className="mb-3 flex items-center justify-between font-mono text-xs uppercase tracking-wide">
         <span className="text-muted">
           <span className="text-muted">[8]</span> View

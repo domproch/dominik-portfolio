@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <div className="mx-auto max-w-2xl px-6 pt-16 sm:pt-24">
-        <header className="pb-6">
+        <header className="pb-4">
           <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 pb-4">
             <div>
               <p className="text-xl font-semibold tracking-tight sm:text-2xl">
